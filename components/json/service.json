@@ -1,0 +1,46 @@
+{
+    "data": [
+        {
+            "image" : "http://sonicesolution.com/images/services/web-design.jpg",
+            "heading": "Web Designing",
+            "content" : "Futuristic designs for better web experience"
+            
+           
+            
+        },
+
+        {
+            "image" : "http://sonicesolution.com/images/services/software-development.jpg",
+       
+            "heading": "Software Development",
+            "content" : "Softwares to meet your business standards"
+            
+           
+            
+        },
+
+        {
+            "image" : "http://sonicesolution.com/images/services/web-application.jpg",
+            
+            "heading": "Mobile Apps",
+            "content" : "Polished mobile apps for your business"
+            
+           
+            
+        },
+
+        {
+            "image" : "http://sonicesolution.com/images/services/eCommerce.jpg",
+            "heading": "Internet Marketing",
+            "content" : "Market your business over internet"
+            
+           
+            
+        }
+        
+        
+        
+    ]
+
+   
+}
