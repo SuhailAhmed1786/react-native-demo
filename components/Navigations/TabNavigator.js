@@ -1,30 +1,20 @@
-import React from "react";
+import React, {useEffect} from 'react';
 import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
-import {TouchableOpacity, Text} from 'react-native'
-import Icon from 'react-native-vector-icons/FontAwesome';
+import {TouchableOpacity, Button, View, Text} from 'react-native'
+import Icon from 'react-native-vector-icons/FontAwesome5';
 // import { MainStackNavigator, ContactStackNavigator} from "./StackNavigator";r
 import Home from "../pages/Home";
+import News  from '../pages/News'
 import About from '../pages/About'
 import Contact from '../pages/Contact'
 import TopNavigation from './TopNavigation'
-import Enquiry from '../pages/Enquiry'
 import { PRIMARY_COLOR } from "../_helper/config";
+import call from 'react-native-phone-call';
 const Tab = createBottomTabNavigator();
+
 const triggerCall = () => {
-  // Check for perfect 10 digit length
-  // if (inputValue.length != 10) {
-  //   alert('Please insert correct contact number');
-  //   return;
-  // }
-
-  const args = {
-    number: '9928736111',
-    prompt: true,
-  };
-  // Make a call
-  call(args).catch(console.error);
-};
-
+  return null
+}
 
 const TabNavigator = () => {
   return (
@@ -34,6 +24,7 @@ const TabNavigator = () => {
       tabBarOptions={{
         activeTintColor: '#FFFFFF',
         inactiveTintColor: '#F8F8F8',
+       
         style: {
           backgroundColor: PRIMARY_COLOR,
         },
@@ -61,6 +52,12 @@ const TabNavigator = () => {
         tabBarIcon: () => <Icon name="server" size={22} color="#fff" />
       }} />
 
+      <Tab.Screen name="News" component={News}
+        options={{
+          tabBarIcon: () => <Icon name="ad" size={22} color="#fff" />
+
+        }} />
+
 
       <Tab.Screen name="Enqiry" component={Contact}
         options={{
@@ -68,23 +65,25 @@ const TabNavigator = () => {
 
         }} />
 
-      <Tab.Screen name="Call" component={Enquiry}
+        
+      <Tab.Screen name="Call" component={triggerCall}
         options={{
           tabBarIcon: () => <Icon name="phone" size={22} color="#fff" />
         }}
         listeners={()=>({
           tabPress:e=>{
-            <TouchableOpacity
-          activeOpacity={0.7}
-          onPress={triggerCall}>
-        
-        </TouchableOpacity>
+            const args = {
+              number: '9928736111',
+              prompt: true,
+            };
+            // Make a call
+            call(args).catch(console.error);
+           
           }
         })}
         />
 
     </Tab.Navigator>
-
   );
 };
 

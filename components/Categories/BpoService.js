@@ -1,6 +1,6 @@
 import * as React from 'react';
 import { View, Text, Image, StyleSheet, Button, ScrollView } from "react-native";
-import { headerImageWidth, headerImageHeight  } from "../_helper/config";
+import { headerImageWidth, headerImageHeight, imageUrl  } from "../_helper/config";
 const BpoService = () => {
 
     return (
@@ -9,9 +9,8 @@ const BpoService = () => {
         <View>
             
             <View>
-            
             <Image style={{width: headerImageWidth, height: headerImageHeight}}
-            source={require('../img/bpo.jpg')}
+            source={{uri: imageUrl + '/services/bpo.jpg'}}
             />
                 <Text style={styles.heading}>Industrial Training</Text>
             <Text style={styles.Content}>

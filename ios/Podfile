@@ -12,6 +12,8 @@ target 'MyApp' do
 
   pod 'react-native-webview', :path => '../node_modules/react-native-webview'
 
+  pod 'react-native-netinfo', :path => '../node_modules/@react-native-community/netinfo'
+
   target 'MyAppTests' do
     inherit! :complete
     # Pods for testing

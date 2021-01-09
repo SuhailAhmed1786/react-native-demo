@@ -1,6 +1,6 @@
 import * as React from 'react';
 import { View, Text, Image, StyleSheet, Button, ScrollView } from "react-native";
-import { headerImageWidth, headerImageHeight  } from "../_helper/config";
+import { headerImageWidth, headerImageHeight, imageUrl  } from "../_helper/config";
 const CorporateTraining = () => {
 
  
@@ -10,10 +10,11 @@ const CorporateTraining = () => {
       <View>
 
         <View>
-
-        <Image style={{width: headerImageWidth, height: headerImageHeight}}
-            source={require('../img/industrial-training.jpg')}
+             <Image style={{width: headerImageWidth, height: headerImageHeight}}
+            source={{uri: imageUrl + '/services/industrial-training.jpg'}}
             />
+            
+
           <Text style={styles.heading}>Corporate Training</Text>
           <Text style={styles.Content}>
             Sonic eSolution is one of the best IT company in Udaipur provides solutions for Software Development, SEO, Offshore Website Development, Internet Marketing, Outsourcing . Our training structure includes Industrial, Live Project, Corporate, PHP, Asp.Net, Web & Graphics Design Trainings.

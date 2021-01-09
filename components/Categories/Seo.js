@@ -1,6 +1,6 @@
 import * as React from 'react';
 import { View, Text, Image, StyleSheet, Button, ScrollView } from "react-native";
-import { headerImageWidth, headerImageHeight  } from "../_helper/config";
+import { headerImageWidth, headerImageHeight, imageUrl } from "../_helper/config";
 const Seo = () => {
 
     return (
@@ -10,8 +10,9 @@ const Seo = () => {
             
             <View>
             
+         
             <Image style={{width: headerImageWidth, height: headerImageHeight}}
-            source={require('../img/seo.jpg')}
+            source={{uri: imageUrl + '/services/seo.jpg'}}
             />
                 <Text style={styles.heading}>Search Engine Optimization</Text>
             <Text style={styles.Content}>

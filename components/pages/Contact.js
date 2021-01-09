@@ -30,9 +30,6 @@ class Contact extends Component {
       if (this.state.username == '') {
          // console.log("username", this.state.username)
          this.setState({ nameError: "" })
-         
-         
-
       }
       if (this.state.email == '') {
          this.setState({ emailError: '' })

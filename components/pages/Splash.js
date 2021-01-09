@@ -1,6 +1,6 @@
 import React, { Component } from 'react';  
  import { Platform, StyleSheet, View, Text,  
-TouchableOpacity, Alert } from 'react-native';  
+TouchableOpacity, Alert, Image } from 'react-native';  
  import { NavigationContainer } from "@react-navigation/native";
 // import App from '.App'
 
@@ -30,17 +30,15 @@ TouchableOpacity, Alert } from 'react-native';
         let Splash_Screen = (  
              <View style={styles.SplashScreen_RootView}>  
                  <View style={styles.SplashScreen_ChildView}>  
-                 {/* <Image style={{ width: 50, marginRight: 20, padding: 10, margin: 5, height: 50 }} source={require('./img/logo.png')} /> */}
+                 <Image style={{ width: 50, marginRight: 20, padding: 10, margin: 5, height: 50 }} source={require('../img/logo.jpg')} />
                 </View>  
              </View> )  
              
          return(  
            
-            // <NavigationContainer><DrawerNavigator/></NavigationContainer>,
+         
              <View style = { styles.MainContainer }>
-                   
-                    
-                   
+                  
                    
                  {  
                   (this.state.isVisible === true) ? Splash_Screen : null  

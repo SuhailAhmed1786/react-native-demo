@@ -1,10 +1,38 @@
 {
-    "data": [
+    "LatestNews": [
         {
+
+            "title": "first",
+            "image" : "https://english.cdn.zeenews.com/sites/default/files/styles/zm_700x400/public/2021/01/04/908786-india-team.jpg",
+            "description": "this is summary",
+            "date" : "7.1.2021"
             
-            "image" : "https://www.jiomart.com/images/cms/aw_rbslider/slides/1602257194_Atta_Web.jpg"
+        },
+
+        {
+
+            "title": "second",
+            "image" : "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS9vpWcwB7GsmiV7ULCJicFKfubBYUxnfn71A&usqp=CAU",
+            "description": "this is summary",
+            "date" : "7.1.2021"
             
-           
+        },
+
+        {
+
+            "title": "Third",
+            "image" : "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS99_dwlkQbxwXeMZqHcK2NzQBv8G0dOoebkw&usqp=CAU",
+            "description": "this is summary",
+            "date" : "7.1.2021"
+            
+        },
+
+        {
+
+            "title": "Fourth",
+            "image" : "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRBahREZuQyl_ATOn2oTOttXtRiolZxAf_Ouw&usqp=CAU",
+            "description": "this is summary",
+            "date" : "7.1.2021"
             
         }
         

@@ -1,9 +1,10 @@
 import React from "react";
 import { View, Text, Button, Image, StatusBar } from 'react-native';
 import { createDrawerNavigator } from "@react-navigation/drawer";
-import Icon from 'react-native-vector-icons/FontAwesome';
+import Icon from 'react-native-vector-icons/FontAwesome5';
 import TabNavigator from "./TabNavigator";
 import About from "../pages/About";
+import News from '../pages/News'
 import Contact from "../pages/Contact";
 import Logo from '../Navigations/Logo';
 import { PRIMARY_COLOR } from "../_helper/config";
@@ -110,6 +111,20 @@ options={{
           headerTitle: () => <Header />,
           drawerIcon: () =>
             <Icon name="id-badge" size={25} color="#fff" />,
+
+          headerRight: () => (
+            <Logo />
+
+
+          )
+        }}
+      />
+
+<Drawer.Screen name="News" component={News}
+        options={{
+          headerTitle: () => <Header />,
+          drawerIcon: () =>
+            <Icon name="ad" size={25} color="#fff" />,
 
           headerRight: () => (
             <Logo />

@@ -2,6 +2,7 @@ import React from 'react'
 import { View } from 'react-native'
 import { SliderBox } from "react-native-image-slider-box";
 
+
 class Slider extends React.Component {
     constructor(props) {
         super(props)
@@ -19,11 +20,17 @@ class Slider extends React.Component {
         return (
             <View>
                 <SliderBox
-                    // autoplay= {true}
-                    images={this.state.images}
-                    sliderBoxHeight={220}
-                    onCurrentImagePressed={index => console.warn(`image ${index} pressed`)}
-                    currentImageEmitter={index => console.warn(`current pos is: ${index}`)}
+                dotStyle={2}
+                autoplayInterval={15000}
+                disableOnPress={true}
+                dotColor={"tomato"}
+                autoplay={true}
+                imageLoadingColor="#fff"
+                circleLoop={true}
+                images={this.state.images}
+                sliderBoxHeight={200}              
+                onCurrentImagePressed={index => console.warn(`image ${index} pressed`)}
+              
                 />
             </View>
         );

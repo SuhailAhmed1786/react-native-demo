@@ -4,9 +4,12 @@ import { DrawerContentScrollView, DrawerItemList, DrawerItem } from '@react-navi
 import onShare from '../pages/ShareApp';
 import Icon from 'react-native-vector-icons/FontAwesome';
 import { PRIMARY_COLOR } from "../_helper/config";
-// import {SocialIcon} from 'react-native-elements';
+import {SocialIcon} from 'react-native-elements';
 const CustomSidebarMenu = (props) => {
-
+  const facebook = 'https://www.facebook.com/SoniceSolution'
+  const twitter = 'https://twitter.com/sonicesolution'
+  const insta = 'https://www.instagram.com/'
+  const whatsapp = 'https://wa.me/9928736111'
   const proileImage = '../img/sonic-esolution.png';
 
   return (
@@ -63,22 +66,41 @@ const CustomSidebarMenu = (props) => {
                    <Text style={styles.address}>Contact No.: +91 99287-36111
                    Email: info@sonicesolution.com
                      </Text>
-                   
+                     
                   </View>
 
-                  <View style={{width: '100%', flexDirection: 'column'}}>
-            {/* <SocialIcon
-              title="Sign In youtube"
-              button
-              type="youtube"
-              onPress={() => {
-                alert('youtube');
-              }}
-            /> */}
-            <Text style={{textAlign: 'center'}}>youtube</Text>
+                  <View>
+                  <View style={{ marginTop: 10, height: 0.4, backgroundColor: "white" }}></View>
+                  <Text style={{color:'#fff', fontSize:15, marginLeft:16, marginTop: 10}}>Follow Us</Text>
+                  </View>
+                  <View style={{flex: 1, marginTop: 5, flexDirection: 'row' }}>
+
+                  
+                  <SocialIcon
+                  type="facebook"
+                  fontSize="10"
+                  onPress={() => Linking.openURL(facebook)}
+
+                  
+		              />
+
+                <SocialIcon
+                  type="twitter"
+                  onPress={() => Linking.openURL(twitter)}
+		              />
+                  <SocialIcon
+                  type="instagram"
+                  onPress={() => Linking.openURL(insta)}
+		              />
+                  <SocialIcon
+                  type="whatsapp"
+                  onPress={() => Linking.openURL(whatsapp)}
+		              />
+                    </View>
+                
           </View>
                
-                </View>
+                
       </DrawerContentScrollView>
 
     </SafeAreaView>
